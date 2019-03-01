@@ -1,0 +1,59 @@
+<html>
+    <head>
+    <link rel="icon"
+      type="image/png"
+      href="fav-icon.png">
+    <style>
+        div,img {
+            border: 1px solid black;
+            background-color: red;
+            height: 150px;
+            width: 150px;
+            position: absolute;
+        }
+
+        #item1 {
+            top: 50px;
+            left: 50px;
+        }
+
+        #item2 {
+            top: 100px;
+            left: 100px;
+        }
+
+        #item3 {
+            top: 150px;
+            left: 150px;
+        }
+
+        #item4 {
+            top: 200px;
+            left: 200px;
+        }
+
+        #item5 {
+            top: 250px;
+            left: 250px;
+        }
+    </style>
+    <script>
+        function imgToTop(p1) {
+            document.getElementById('item1').style.zIndex = 0;
+            document.getElementById('item2').style.zIndex = 0;
+            document.getElementById('item3').style.zIndex = 0;
+            document.getElementById('item4').style.zIndex = 0;
+            document.getElementById('item5').style.zIndex = 0;
+            document.getElementById(p1).style.zIndex = 1;
+        }
+    </script>
+</head>
+
+<body>
+    <img id="item1" onclick="imgToTop('item1')" src="1.jpg">
+    <img id="item2" onclick="imgToTop('item2')" src="2.jpg">
+    <img id="item3" onclick="imgToTop('item3')" src="3.jpg">
+    <img id="item4" onclick="imgToTop('item4')" src="4.jpg">
+    <img id="item5" onclick="imgToTop('item5')" src="5.jpg">
+</body>
+</html>
